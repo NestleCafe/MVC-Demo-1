@@ -1,0 +1,32 @@
+@keyframes colorChange{
+    14%{
+        background: red;
+    }
+    28%{
+        background:orange;
+    }
+    42%{
+        background:yellow;
+    }
+    57%{
+        background:green;
+    }
+    70%{
+        background: blue;
+    }
+    84%{
+        background: indigo;
+    }
+    100%{
+        background: purple;
+    }
+}
+#app4 .circle{
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+#app4 .circle.active{
+    animation: colorChange 3s infinite alternate linear;
+}

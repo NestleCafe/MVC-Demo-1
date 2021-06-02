@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+*::before,*::after {
+    box-sizing: border-box;
+}
+ol,ul {
+    list-style: none;
+}
+body{
+    overflow: hidden;
+}
+  body > .page{
+    display: flex;
+    flex-wrap: wrap;
+}
+  body > .page > section{
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid grey;
+}
+
+#app2 .tab-bar{
+    display: flex;
+}
+#app2 .tab-bar > li{
+    width: 50%;
+    border: 1px solid black;
+    text-align: center;
+}
+#app2 .tab-bar > li.selected{
+    background: orange;
+    color: white;
+}
+#app2 .tab-content > li{
+    display: none;
+}
+#app2 .tab-content > li.active{
+    display: block;
+}
+
+#app3 .square{
+    width: 80px;
+    height: 80px;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    border: 1px solid gray;
+    border-radius: 50%;
+    transition: transform 1s;
+}
+#app3 .square.active{
+    transform: translateX(15vw);
+}
+@keyframes colorChange{
+    14%{
+        background: red;
+    }
+    28%{
+        background:orange;
+    }
+    42%{
+        background:yellow;
+    }
+    57%{
+        background:green;
+    }
+    70%{
+        background: blue;
+    }
+    84%{
+        background: indigo;
+    }
+    100%{
+        background: purple;
+    }
+}
+#app4 .circle{
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+#app4 .circle.active{
+    animation: colorChange 3s infinite alternate linear;
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
