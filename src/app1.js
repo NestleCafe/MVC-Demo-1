@@ -5,24 +5,30 @@ const $btnMinus = $("#minus1")
 const $btnMul = $("#mul2")
 const $btnDivide = $("#divide2")
 const $number = $("#number")
+let localNumber = localStorage.getItem("localNumber")
+$number.text(localNumber || 100)
 
 $btnAdd.on("click", () =>{
-    let currentNumber = parseInt($number.text())
-    currentNumber ++
-    $number.text(currentNumber)
+    let localNumber = parseInt($number.text())
+    localNumber ++
+    localStorage.setItem("localNumber",localNumber)
+    $number.text(localNumber)
 })
 $btnMinus.on("click", () =>{
-    let currentNumber = parseInt($number.text())
-    currentNumber --
-    $number.text(currentNumber)
+    let localNumber = parseInt($number.text())
+    localNumber --
+    localStorage.setItem("localNumber",localNumber)
+    $number.text(localNumber)
 })
 $btnMul.on("click", () =>{
-    let currentNumber = parseInt($number.text())
-    currentNumber *= 2
-    $number.text(currentNumber)
+    let localNumber = parseInt($number.text())
+    localNumber *= 2
+    localStorage.setItem("localNumber",localNumber)
+    $number.text(localNumber)
 })
 $btnDivide.on("click", () =>{
-    let currentNumber = parseInt($number.text())
-    currentNumber /= 2
-    $number.text(currentNumber)
+    let localNumber = parseInt($number.text())
+    localNumber /= 2
+    localStorage.setItem("localNumber",localNumber)
+    $number.text(localNumber)
 })

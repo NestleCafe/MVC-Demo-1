@@ -11226,25 +11226,31 @@ var $btnMinus = (0, _jquery.default)("#minus1");
 var $btnMul = (0, _jquery.default)("#mul2");
 var $btnDivide = (0, _jquery.default)("#divide2");
 var $number = (0, _jquery.default)("#number");
+var localNumber = localStorage.getItem("localNumber");
+$number.text(localNumber || 100);
 $btnAdd.on("click", function () {
-  var currentNumber = parseInt($number.text());
-  currentNumber++;
-  $number.text(currentNumber);
+  var localNumber = parseInt($number.text());
+  localNumber++;
+  localStorage.setItem("localNumber", localNumber);
+  $number.text(localNumber);
 });
 $btnMinus.on("click", function () {
-  var currentNumber = parseInt($number.text());
-  currentNumber--;
-  $number.text(currentNumber);
+  var localNumber = parseInt($number.text());
+  localNumber--;
+  localStorage.setItem("localNumber", localNumber);
+  $number.text(localNumber);
 });
 $btnMul.on("click", function () {
-  var currentNumber = parseInt($number.text());
-  currentNumber *= 2;
-  $number.text(currentNumber);
+  var localNumber = parseInt($number.text());
+  localNumber *= 2;
+  localStorage.setItem("localNumber", localNumber);
+  $number.text(localNumber);
 });
 $btnDivide.on("click", function () {
-  var currentNumber = parseInt($number.text());
-  currentNumber /= 2;
-  $number.text(currentNumber);
+  var localNumber = parseInt($number.text());
+  localNumber /= 2;
+  localStorage.setItem("localNumber", localNumber);
+  $number.text(localNumber);
 });
 },{"jquery":"juYr"}],"vZ5o":[function(require,module,exports) {
 "use strict";
@@ -11306,4 +11312,4 @@ require("./app3.js");
 
 require("./app4.js");
 },{"./reset.css":"1AQo","./global.css":"1AQo","./app1.js":"U+s5","./app2.js":"vZ5o","./app3.js":"y8lT","./app4.js":"eWpN"}]},{},["epB2"], null)
-//# sourceMappingURL=main.b8cc54c9.js.map
+//# sourceMappingURL=main.e2119fec.js.map
